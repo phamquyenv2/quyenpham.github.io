@@ -3,87 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hồ sơ Năng lực - Phạm Anh Quyền</title>
+    <title>Phạm Anh Quyền - Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: auto; padding: 20px; background-color: #f4f7f6; }
-        header { text-align: center; margin-bottom: 30px; }
-        h1 { color: #2c3e50; margin-bottom: 5px; }
-        h2 { color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 5px; margin-top: 30px; }
-        .contact { margin-bottom: 20px; font-size: 0.95em; }
-        .contact a { margin: 0 10px; color: #2980b9; text-decoration: none; }
-        .card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .job-title { font-weight: bold; font-size: 1.1em; color: #2c3e50; }
-        .tech-stack { color: #7f8c8d; font-style: italic; font-size: 0.9em; margin-bottom: 10px; }
-        ul { padding-left: 20px; margin-top: 5px; }
-        li { margin-bottom: 8px; }
+        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; --gray: #64748b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navbar */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(5px); z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .nav-content { display: flex; justify-content: space-between; padding: 15px 20px; max-width: 1100px; margin: auto; font-weight: bold; }
+        .nav-links a { margin-left: 20px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #f0f4f8, #d9e2ec); text-align: center; justify-content: center; }
+        .hero h1 { font-size: 3.5rem; color: var(--dark); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: var(--gray); margin-bottom: 25px; max-width: 600px; }
+        .btn { display: inline-block; padding: 12px 30px; background: var(--primary); color: white; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); margin-left: 10px; }
+
+        /* Sections */
+        section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--dark); position: relative; }
+        
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        /* Cards */
+        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--primary); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .card h3 { margin-bottom: 10px; color: var(--dark); font-size: 1.3rem; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
+        .tag { background: #e0f2fe; color: #0284c7; padding: 5px 10px; border-radius: 15px; font-size: 0.85rem; font-weight: bold; }
+        .card ul { margin-left: 20px; font-size: 0.95rem; color: var(--gray); }
+        .card li { margin-bottom: 8px; }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px 0; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Phạm Anh Quyền</h1>
-    <p>Kỹ sư Phần mềm (Software Engineer)</p>
-    <div class="contact">
-        <a href="mailto:quyen.pa0303@gmail.com">quyen.pa0303@gmail.com</a> | 
-        <a href="tel:0383870916">0383870916</a> | 
-        <a href="https://github.com/phamquyenv2" target="_blank">GitHub Profile</a>
+<nav>
+    <div class="nav-content">
+        <div>PAQ.</div>
+        <div class="nav-links">
+            <a href="#about">Về tôi</a>
+            <a href="#skills">Kỹ năng</a>
+            <a href="#projects">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+        </div>
     </div>
-</header>
+</nav>
 
-<div class="card">
-    <h2>Giới thiệu</h2>
-    <p>Sinh viên Kỹ thuật phần mềm có nền tảng tốt và kinh nghiệm phát triển các dự án thực tế. Học hỏi nhanh, kỹ năng giải quyết vấn đề linh hoạt và luôn mong muốn xây dựng các giải pháp phần mềm ổn định, chất lượng.</p>
-</div>
-
-<div class="card">
-    <h2>Kỹ năng Công nghệ</h2>
-    <ul>
-        <li><strong>Thế mạnh:</strong> Java (Spring Boot), React JS, React Native, thiết kế cơ sở dữ liệu (MySQL/SQL Server).</li>
-        <li><strong>Kinh nghiệm thực tiễn:</strong> Python (Django/Flask), AWS S3/MinIO, Docker, Git, CI/CD pipelines, RabbitMQ.</li>
-        <li><strong>Đã làm quen:</strong> GCP, Firebase, tích hợp thanh toán (MoMo, SePay), Twilio SMS.</li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2>Dự án Tiêu biểu</h2>
-    
-    <div>
-        <p class="job-title">Hệ thống Quản lý Bán lẻ ShopLite</p>
-        <p class="tech-stack">Java Spring Boot, React/Ionic, MySQL</p>
-        <ul>
-            <li>Phát triển hệ thống toàn diện với hơn 130 API hỗ trợ bán hàng, quản lý kho, tính lương và thu chi.</li>
-            <li>Tối ưu hóa tốc độ tải dữ liệu và xử lý triệt để các lỗi đồng bộ kho khi có nhiều giao dịch cùng lúc.</li>
-            <li>Tích hợp thanh toán mã QR trực tuyến và triển khai tự động hoàn toàn qua GitHub Actions.</li>
-        </ul>
+<section class="hero" id="hero">
+    <div class="container">
+        <h1>Phạm Anh Quyền</h1>
+        <p>Kỹ sư Phần mềm. Có khả năng học hỏi nhanh và luôn hướng tới việc xây dựng các giải pháp phần mềm ổn định, tin cậy[cite: 1].</p>
+        <a href="#projects" class="btn">Xem Dự Án</a>
+        <a href="https://github.com/phamquyenv2" target="_blank" class="btn btn-outline">GitHub Profile</a>
     </div>
+</section>
 
-    <div style="margin-top: 20px;">
-        <p class="job-title">Ứng dụng Việc làm JobHunter</p>
-        <p class="tech-stack">Django, React Native, MySQL</p>
-        <ul>
-            <li>Thiết kế hệ thống API và cơ sở dữ liệu vững chắc bằng Django.</li>
-            <li>Tích hợp ví MoMo để xử lý giao dịch tự động.</li>
-            <li>Xây dựng giao diện ứng dụng điện thoại mượt mà, giúp người dùng tiết kiệm 40% thời gian tìm kiếm việc làm.</li>
-        </ul>
+<section id="about" class="container">
+    <h2 class="section-title">Tổng quan</h2>
+    <div class="grid-2">
+        <div class="card">
+            <h3>Kinh nghiệm Làm việc</h3>
+            <p><strong>Thực tập sinh Phần mềm - LINKQ SOFTWARE JSC</strong>[cite: 1]</p>
+            <ul>
+                <li>Phân tích yêu cầu và thiết kế kiến trúc hệ thống bán lẻ đa nền tảng[cite: 1].</li>
+                <li>Xây dựng module xác thực cho khách hàng ngân hàng[cite: 1].</li>
+                <li>Thiết lập luồng CI/CD triển khai phần mềm lên đám mây[cite: 1].</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Học vấn & Thành tựu</h3>
+            <p><strong>Đại học Mở TP.HCM (2023 - 2027)</strong>[cite: 1]</p>
+            <ul>
+                <li>Sinh viên năm 4 ngành Kỹ thuật Phần mềm[cite: 1].</li>
+                <li>Chứng chỉ ngoại ngữ: TOEIC 790[cite: 1].</li>
+                <li>3 lần nhận Học bổng Học thuật (2025 & 2026)[cite: 1].</li>
+            </ul>
+        </div>
     </div>
+</section>
 
-    <div style="margin-top: 20px;">
-        <p class="job-title">Hệ thống Lưu trữ Dữ liệu Đám mây</p>
-        <p class="tech-stack">Python Flask, MinIO</p>
-        <ul>
-            <li>Xây dựng máy chủ điều phối gọn nhẹ, xử lý ổn định lượng lớn yêu cầu tải file.</li>
-            <li>Quản lý hệ thống lưu trữ đạt tỷ lệ thành công 99% trong các thao tác vận hành dữ liệu.</li>
-        </ul>
+<section id="skills" style="background-color: white;">
+    <div class="container">
+        <h2 class="section-title">Kỹ năng Công nghệ</h2>
+        <div class="card" style="border-top: none; text-align: center;">
+            <div class="tech-tags" style="justify-content: center; gap: 15px;">
+                <span class="tag" style="background:#dcfce7; color:#166534; font-size:1rem;">Java (Spring Boot)</span>
+                <span class="tag" style="background:#dcfce7; color:#166534; font-size:1rem;">React JS / Native</span>
+                <span class="tag" style="background:#dcfce7; color:#166534; font-size:1rem;">MySQL / SQL Server</span>
+                <span class="tag" style="font-size:1rem;">Python (Django/Flask)</span>
+                <span class="tag" style="font-size:1rem;">Docker</span>
+                <span class="tag" style="font-size:1rem;">AWS S3 / MinIO</span>
+                <span class="tag" style="font-size:1rem;">CI/CD (GitHub Actions)</span>
+                <span class="tag" style="font-size:1rem;">RabbitMQ</span>
+                <span class="tag" style="background:#f1f5f9; color:#475569;">GCP / Firebase</span>
+                <span class="tag" style="background:#f1f5f9; color:#475569;">MoMo / SePay API</span>
+            </div>
+            <p style="margin-top:20px; color:var(--gray); font-size:0.95rem;">Thành thạo xây dựng RESTful API, thiết kế cơ sở dữ liệu, quản lý trạng thái frontend và tự động hóa quy trình triển khai[cite: 1].</p>
+        </div>
     </div>
-</div>
+</section>
 
-<div class="card">
-    <h2>Kinh nghiệm & Học vấn</h2>
-    <ul>
-        <li><strong>Thực tập sinh (LINKQ SOFTWARE JSC):</strong> Tham gia thiết kế hệ thống bán lẻ, xây dựng module đăng nhập bảo mật và thiết lập luồng triển khai phần mềm tự động.</li>
-        <li><strong>Đại học Mở TP.HCM (2023 - 2027):</strong> Sinh viên năm 4 ngành Kỹ thuật Phần mềm. Đạt TOEIC 790 và 3 lần nhận học bổng học thuật.</li>
-    </ul>
-</div>
+<section id="projects" class="container">
+    <h2 class="section-title">Dự án Nổi bật</h2>
+    <div class="grid-3">
+        <!-- Dự án 1 -->
+        <div class="card">
+            <h3>ShopLite (KiotViet Clone)[cite: 1]</h3>
+            <div class="tech-tags">
+                <span class="tag">Spring Boot 3</span>
+                <span class="tag">React/Ionic</span>
+                <span class="tag">MySQL</span>
+            </div>
+            <ul>
+                <li>Hệ thống 135 API, quản lý kho, tính lương, thu chi[cite: 1].</li>
+                <li>Đạt 75% test coverage với 423 test case tự động[cite: 1].</li>
+                <li>Giảm trễ API từ 320ms xuống 175ms nhờ Caffeine caching[cite: 1].</li>
+                <li>Tự động CI/CD qua GitHub Actions (vòng lặp 6.5 phút)[cite: 1].</li>
+            </ul>
+        </div>
+
+        <!-- Dự án 2 -->
+        <div class="card">
+            <h3>JobHunter Mobile[cite: 1]</h3>
+            <div class="tech-tags">
+                <span class="tag">Django DRF</span>
+                <span class="tag">React Native</span>
+            </div>
+            <ul>
+                <li>Kiến trúc API đảm bảo uptime 24/7 trên PythonAnywhere[cite: 1].</li>
+                <li>Tích hợp ví MoMo thanh toán và Cloudinary lưu trữ[cite: 1].</li>
+                <li>Giao diện di động giúp giảm 40% thời gian tìm việc cho người dùng[cite: 1].</li>
+            </ul>
+        </div>
+
+        <!-- Dự án 3 -->
+        <div class="card">
+            <h3>Cloud Data Storage[cite: 1]</h3>
+            <div class="tech-tags">
+                <span class="tag">Python Flask</span>
+                <span class="tag">MinIO</span>
+            </div>
+            <ul>
+                <li>Máy chủ định tuyến Flask xử lý tải file tần suất cao[cite: 1].</li>
+                <li>Tỷ lệ thành công 99% trong quản lý bucket lưu trữ[cite: 1].</li>
+                <li>Tối ưu hóa tốc độ truy xuất bằng cách quản lý siêu dữ liệu qua JSON[cite: 1].</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <h2>Sẵn sàng hợp tác cùng bạn</h2>
+        <p style="margin: 15px 0;">Điện thoại: 0383870916 | Email: quyen.pa0303@gmail.com[cite: 1]</p>
+        <p>Hồ Chí Minh, Việt Nam[cite: 1]</p>
+        <div style="margin-top: 20px;">
+            <a href="https://github.com/phamquyenv2" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 1.2rem;">Truy cập GitHub của tôi</a>[cite: 1]
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
